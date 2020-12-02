@@ -1,8 +1,12 @@
 #!/bin/sh
 
 import os
+import sys
+
 os.sys.path.append(os.path.abspath('.'))
 os.sys.path.append(os.path.dirname(os.path.abspath('.')))
+
+sys.path.insert(1,'/kaggle/working/audio-super-res/src')
 
 import matplotlib
 matplotlib.use('Agg')
