@@ -5,7 +5,7 @@ Create an HDF5 file of patches for training super-resolution model.
 import os, argparse
 import numpy as np
 import h5py
-import cPickle
+import Pickle
 
 import librosa
 from scipy import interpolate
