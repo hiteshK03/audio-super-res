@@ -1,4 +1,4 @@
-SINGLE_SPEAKER_DIR=../VCTK-Corpus/wav48/p225
+SINGLE_SPEAKER_DIR=/kaggle/input/english-multispeaker-corpus-for-voice-cloning/VCTK-Corpus/VCTK-Corpus/wav48/p225
 
 # patch generation
 SCA=8
