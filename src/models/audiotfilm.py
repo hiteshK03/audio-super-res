@@ -4,7 +4,7 @@ import tensorflow as tf
 from scipy import interpolate
 from models.model import Model, default_opt
 
-from layers.subpixel import SubPixel1D, SubPixel1D_v2
+from models.layers.subpixel import SubPixel1D, SubPixel1D_v2
 
 from keras import backend as K
 from keras.layers import merge, MaxPooling1D, MaxPooling2D, AveragePooling1D
