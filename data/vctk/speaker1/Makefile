@@ -1,4 +1,5 @@
 SINGLE_SPEAKER_DIR=/kaggle/input/english-multispeaker-corpus-for-voice-cloning/VCTK-Corpus/VCTK-Corpus/wav48/p225
+out_path=/kaggle/working/output
 
 # patch generation
 SCA=8
@@ -22,7 +23,7 @@ vctk-speaker1-train.%.$(SR).$(TR_DIM).$(TR_STR).h5: speaker1-train-files.txt
 	python ../prep_vctk.py \
 		--file-list $< \
 		--in-dir $(SINGLE_SPEAKER_DIR) \
-		--out $@.tmp \
+		--out $(out_path) \
 		--scale $* \
 		--sr $(SR) \
 		--dimension $(TR_DIM) \
@@ -35,7 +36,7 @@ vctk-speaker1-val.%.$(SR).$(VA_DIM).$(VA_STR).h5: speaker1-val-files.txt
 	python ../prep_vctk.py \
 		--file-list $< \
 		--in-dir $(SINGLE_SPEAKER_DIR) \
-		--out $@.tmp \
+		--out $(out_path) \
 		--scale $* \
 		--sr $(SR) \
 		--dimension $(VA_DIM) \
