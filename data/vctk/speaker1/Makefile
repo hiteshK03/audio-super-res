@@ -23,7 +23,7 @@ vctk-speaker1-train.%.$(SR).$(TR_DIM).$(TR_STR).h5: speaker1-train-files.txt
 	python ../prep_vctk.py \
 		--file-list $< \
 		--in-dir $(SINGLE_SPEAKER_DIR) \
-		--out /kaggle/working/output/vctk-speaker1-train.$(SCA).$(SR).$(TR_DIM).$(TR_STR).h5 \
+		--out $@.tmp \
 		--scale $* \
 		--sr $(SR) \
 		--dimension $(TR_DIM) \
@@ -36,7 +36,7 @@ vctk-speaker1-val.%.$(SR).$(VA_DIM).$(VA_STR).h5: speaker1-val-files.txt
 	python ../prep_vctk.py \
 		--file-list $< \
 		--in-dir $(SINGLE_SPEAKER_DIR) \
-		--out /kaggle/working/output/vctk-speaker1-val.$(SCA).$(SR).$(VA_DIM).$(VA_STR).h5 \
+		--out $@.tmp \
 		--scale $* \
 		--sr $(SR) \
 		--dimension $(VA_DIM) \
