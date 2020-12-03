@@ -3,11 +3,11 @@ import time
 
 import numpy as np
 import tensorflow as tf
-import cPickle
+import pickle
 
 import librosa
 from keras import backend as K
-from dataset import DataSet
+from models.dataset import DataSet
 from keras.layers import Input, LSTM, Dense
 from keras.models import Model
 from tqdm import tqdm
