@@ -3,7 +3,7 @@ import tensorflow as tf
 
 from keras.layers.advanced_activations import PReLU
 
-from summarization import create_var_summaries
+from models.layers.summarization import create_var_summaries
 
 # ----------------------------------------------------------------------------
 
