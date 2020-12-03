@@ -61,7 +61,7 @@ class AudioUNet(Model):
           x = LeakyReLU(0.2)(x)
 
       # upsampling layers
-      for l, nf, fs, l_in in reversed(zip(range(L), n_filters, n_filtersizes, downsampling_l)):
+      for l, nf, fs, l_in in list(reversed(list(zip(range(L), n_filters, n_filtersizes, downsampling_l)))):
         with tf.name_scope('upsc_conv%d' % l):
           # (-1, n/2, 2f)
           x = (Convolution1D(nb_filter=2*nf, filter_length=fs, 
