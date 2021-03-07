@@ -109,6 +109,8 @@ def train(args):
       Y_val = np.reshape(Y_val, [Y_val.shape[0], Y_val.shape[2], Y_val.shape[1]])
 
   # determine super-resolution level
+  print(Y_train[0].shape)
+  print(Y_train[0])
   n_dim, n_chan = Y_train[0].shape
   r = Y_train[0].shape[1] / X_train[0].shape[1]
   assert n_chan == 1
